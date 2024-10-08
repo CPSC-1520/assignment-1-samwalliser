@@ -29,8 +29,25 @@ document.getElementById('album-form').addEventListener('submit', function (evt) 
   if (title.length === 0 || title.length > 60) {
     errMsg += '<p>Album Title must be between 1 and 60 characters</p>';
     evt.target.elements['album-title'].classList.add('is-invalid');
-} else {
+  } else {
     evt.target.elements['album-title'].classList.remove('is-invalid');
-}
+  }
+
+  // validate description
+  if (description.length === 0 || description.length > 255) {
+    errMsg += '<p>Description must be between 1 and 255 characters</p>';
+    evt.target.elements['album-description'].classList.add('is-invalid');
+  } else {
+    evt.target.elements['album-description'].classList.remove('is-invalid');
+  }
+
+  // validate album art
+  if (!albumArt) {
+    errMsg += '<p>Please select album art</p>';
+    evt.target.elements['album-art'].classList.add('is-invalid');
+  } else {
+    evt.target.elements['album-art'].classList.remove('is-invalid');
+  }
+
 
 });
