@@ -14,13 +14,23 @@ console.log('JavaScript linked');
   </div>
 */
 
-// An Event Listener to the "submit" event on the form
+// an event listener to the "submit" event on the form
 document.getElementById('album-form').addEventListener('submit', function (evt) {
+  // prevent the default form submission
+  evt.preventDefault();
+
+  // get form inputs
   let title = evt.target.elements['album-title'];
   let description = evt.target.elements['album-description'];
   let albumArt = evt.target.elements['album-art'];
   let errMsg = '';
 
-  
+  // validate title
+  if (title.length === 0 || title.length > 60) {
+    errMsg += '<p>Album Title must be between 1 and 60 characters</p>';
+    evt.target.elements['album-title'].classList.add('is-invalid');
+} else {
+    evt.target.elements['album-title'].classList.remove('is-invalid');
+}
 
 });
