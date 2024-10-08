@@ -1,6 +1,6 @@
-
-// Please refer to the "Required Tasks in the assignments PDF"
 console.log('JavaScript linked');
+// Please refer to the "Required Tasks in the assignments PDF"
+
 // html for the add cheep create function
 /*
   <div class="col">
@@ -14,4 +14,13 @@ console.log('JavaScript linked');
   </div>
 */
 
+// An Event Listener to the "submit" event on the form
+document.getElementById('album-form').addEventListener('submit', function (evt) {
+  let title = evt.target.elements['album-title'];
+  let description = evt.target.elements['album-description'];
+  let albumArt = evt.target.elements['album-art'];
+  let errMsg = '';
 
+  
+
+});
