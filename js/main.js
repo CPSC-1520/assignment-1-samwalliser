@@ -1,6 +1,6 @@
 
 // Please refer to the "Required Tasks in the assignments PDF"
-
+console.log('JavaScript linked');
 // html for the add cheep create function
 /*
   <div class="col">
